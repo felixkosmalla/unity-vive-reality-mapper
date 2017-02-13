@@ -1,4 +1,4 @@
-#Virtual Reality to Actual Reality Mapping Plugin
+#Virtual Reality to Reality Calibration Unity Example
 
 
 ![alt text](docs/algorithm.jpg "Algorithm")
@@ -71,7 +71,11 @@ After loading your 3D model into Unity create 4 Game Object and place their cent
 ![alt text](docs/calibration.jpg "Calibrate") 
 
 Make sure you setup your vive in standing/moving mode. Also be sure that *Vive_controller_enabled* is checked. Then by pointing the charging socket of your controller at the calibration point, press the trigger. A short vibration will indicate that the press was registered. **Important** Rember the order ;)
-After that, the Vive Space should rotate in shift so that your VE matches the reality.
+After that, the Vive Space should rotate and shift so that your VE matches the reality. This would be a good opportunity to save the calibration spheres using the context menu of the script.
+
+
+##Known issues
+* Whenever you unplug the vive, a recalibration is necessary.
 
 
 
