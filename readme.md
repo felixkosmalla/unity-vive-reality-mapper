@@ -10,6 +10,9 @@ For our virtual reality climbing prototype ([VR Climbing](https://www.youtube.co
 
 This repository includes a demo scene of the climbing wall and the necessary scripts that enable you to use this calibration method also for other contexts, e.g. to calibrate a model of a room to the actual environment.
 
+###Credits
+The algorithm used in this project is based on the excelenct article by [Nghia Ho](http://nghiaho.com/?page_id=671)
+
 ###Disclaimer
 This project is by no means perfect nor complete. Feel free to modify or improve the code by your liking, we appreaciate pull-requests.
 
