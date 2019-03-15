@@ -282,16 +282,23 @@ public class VRCalibration : MonoBehaviour {
 
         var R = V.Transpose() * U.Transpose();
 
-
+        // Special reflection case
         if (R.Determinant() < 0)
         {
-            var arr = R.ToArray();
+            // Correctly fix reflection case
+            // See http://nghiaho.com/?page_id=671#comment-846413
+            
+            // Multiply 3rd column of V by -1
+            var arr = V.ToArray();
 
             for(int i = 0; i < 3; i++)
             {
                 arr[2,i] *= -1;
             }
-            R = DenseMatrix.OfArray(arr);
+            V = DenseMatrix.OfArray(arr);
+
+            // Recompute R
+            R = V.Transpose() * U.Transpose();
 
             print("determinant negative");
         }
